@@ -1,4 +1,4 @@
-# Library Management System (Python)
+# Library Management System
 
 A console-based Library Management System developed in Python, demonstrating **Object-Oriented Programming (OOP)** principles like **encapsulation**, **inheritance**, and **polymorphism**. It supports book and member management, book issuance, returns, and uses **JSON files** for persistent data storage.
 
@@ -28,7 +28,7 @@ A console-based Library Management System developed in Python, demonstrating **O
 
 ---
 
-## Object-Oriented Design
+## Object-Oriented Principles
 
 ### `Book`
 - Represents a single book
@@ -60,14 +60,41 @@ A console-based Library Management System developed in Python, demonstrating **O
 ## Data Persistence
 The system uses three JSON files to store data persistently:
 
-### books.json: Stores a list of dictionaries, where each dictionary represents a Book object.
+### books.json: 
+Stores a list of dictionaries, where each dictionary represents a Book object.
 
-### members.json: Stores a dictionary with two keys: "students" and "faculty". Each key maps to a list of dictionaries, representing Student and Faculty objects respectively. This provides clear separation of member types in the persistent storage.
+### members.json: 
+Stores a dictionary with two keys: "students" and "faculty". Each key maps to a list of dictionaries, representing Student and Faculty objects respectively. This provides clear separation of member types in the persistent storage.
 
-### issued_books.json: Stores a dictionary where keys are member IDs (as strings for JSON compatibility) and values are lists of ISBNs of books issued to that member.
+### issued_books.json: 
+Stores a dictionary where keys are member IDs (as strings for JSON compatibility) and values are lists of ISBNs of books issued to that member.
 
 Data is loaded automatically when the LibrarySystem is initialized and saved after every significant operation (adding/updating books/members, issuing/returning books).
 
 
 ---
 ## Example Usage
+
+### Library Management System
+![1](https://github.com/user-attachments/assets/1e2476bd-72bf-4815-88ea-aded3d489729)
+
+### Book Management Options 
+![2](https://github.com/user-attachments/assets/ef5e9659-2414-43e3-917c-efb786bddc81)
+
+### Member Management Options
+![3](https://github.com/user-attachments/assets/3f5f24a9-dc15-4b63-af6c-24d0f29bb963)
+
+### Issue/Return Books Options 
+![4](https://github.com/user-attachments/assets/54d9dd56-0405-4689-bdeb-9eefd5046494)
+
+### Exit 
+![5](https://github.com/user-attachments/assets/09b2fe3b-e111-4ab6-800b-83cd5f682d5e)
+
+### Viewing Available Books
+![6](https://github.com/user-attachments/assets/087699bc-0643-4654-a171-9a31ea9ad7ab)
+
+### Viewing all Members
+![7](https://github.com/user-attachments/assets/33d80af5-4ce7-4c08-a0d6-630f4a89c815)
+
+### Issuing a Book
+![8](https://github.com/user-attachments/assets/5b0b9998-243f-4b76-b6ab-367ccb6162dd)
