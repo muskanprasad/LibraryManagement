@@ -1,32 +1,68 @@
-#Library Management System
-This is a console-based Library Management System developed in Python, demonstrating Object-Oriented Programming (OOP) principles such as encapsulation, inheritance, and polymorphism. The system allows for managing books, library members (students and faculty), and tracking book issuance and returns. All data is persistently stored using JSON files.
+# Library Management System (Python)
 
-##Features
-###Book Management:
+A console-based Library Management System developed in Python, demonstrating **Object-Oriented Programming (OOP)** principles like **encapsulation**, **inheritance**, and **polymorphism**. It supports book and member management, book issuance, returns, and uses **JSON files** for persistent data storage.
 
-Add new books (including handling existing ISBNs to update quantity).
+---
 
-View all books in the library.
+## Features
 
-Search for books by title, author, or ISBN.
+### 📘 Book Management
+- Add new books (handles existing ISBNs by updating quantity)
+- View all books in the library
+- Search for books by title, author, or ISBN
 
-###Member Management:
+### Member Management
+- Add new members (Students and Faculty)
+- View all registered members with details and borrowed books
 
-Add new members, distinguishing between Students and Faculty.
+### Issue/Return Books
+- Issue books to members (checks availability and limits)
+- Return books from members
 
-View all registered members, with a detailed breakdown including books currently borrowed by each member.
+### Data Persistence
+- All data is stored in `books.json`, `members.json`, and `issued_books.json`
+- Data is loaded/saved automatically after relevant operations
 
-###Issue/Return Books:
+### User-Friendly Interface
+- Menu-driven CLI for easy interaction
 
-Issue books to members (checks for availability and member borrowing limits).
+---
 
-Return books from members.
+## Object-Oriented Design
 
-###Data Persistence:
+### `Book`
+- Represents a single book
+- **Encapsulation:** `_title`, `_author`, `_isbn`, `_total_quantity`, `_available_quantity`
+- **Serialization:** `to_dict()` and `from_dict()`
 
-All book, member, and issue/return data is automatically saved to and loaded from JSON files (books.json, members.json, issued_books.json).
+### `Member` (Abstract Base Class)
+- Base for `Student` and `Faculty`
+- **Attributes:** `_member_id`, `_name`
+- **Polymorphism:** `get_max_books_allowed()` (overridden)
+- **Serialization:** `to_dict()` with class name
 
-User-Friendly Interface:
+### `Student` (Inherits Member)
+- Adds `_student_id`
+- Borrow limit: 3 books
 
-Menu-driven interface for easy navigation and interaction.
+### `Faculty` (Inherits Member)
+- Adds `_department`
+- Borrow limit: 10 books
 
+### `LibrarySystem`
+- Manages `_books`, `_members`, `_issued_books`
+- Loads/saves data from JSON
+- Handles operations: `add_book()`, `issue_book()`, `return_book()`, etc.
+- Provides menu-driven CLI interface (`run()` method)
+
+---
+
+## Data Files Used
+
+- `books.json`: List of books
+- `members.json`: 
+  ```json
+  {
+    "students": [...],
+    "faculty": [...]
+  }
