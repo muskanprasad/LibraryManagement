@@ -1,0 +1,36 @@
+{
+    "students": [
+        {
+            "member_id": 1001,
+            "name": "Aman",
+            "type": "Student",
+            "student_id": "12346"
+        },
+        {
+            "member_id": 1002,
+            "name": "Muskan",
+            "type": "Student",
+            "student_id": "12345"
+        },
+        {
+            "member_id": 1005,
+            "name": "Trisha",
+            "type": "Student",
+            "student_id": "12347"
+        }
+    ],
+    "faculty": [
+        {
+            "member_id": 1003,
+            "name": "Prakash Gupta",
+            "type": "Faculty",
+            "department": "CSE"
+        },
+        {
+            "member_id": 1004,
+            "name": "Krishna Singh",
+            "type": "Faculty",
+            "department": "EEE"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Never Lie",
+        "author": "Frieda McFadden",
+        "isbn": "78298750929",
+        "total_quantity": 5,
+        "available_quantity": 5
+    },
+    {
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "isbn": "978-0132350884",
+        "total_quantity": 15,
+        "available_quantity": 14
+    },
+    {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "isbn": "978-0062316097",
+        "total_quantity": 20,
+        "available_quantity": 20
+    },
+    {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "isbn": "978-0735211292",
+        "total_quantity": 12,
+        "available_quantity": 12
+    },
+    {
+        "title": "Harry Potter",
+        "author": "JK Rowling",
+        "isbn": "321-4567890",
+        "total_quantity": 16,
+        "available_quantity": 15
+    }
+]
