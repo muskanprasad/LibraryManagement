@@ -6,7 +6,7 @@ A console-based Library Management System developed in Python, demonstrating **O
 
 ## Features
 
-### 📘 Book Management
+### Book Management
 - Add new books (handles existing ISBNs by updating quantity)
 - View all books in the library
 - Search for books by title, author, or ISBN
@@ -57,12 +57,15 @@ A console-based Library Management System developed in Python, demonstrating **O
 
 ---
 
-## Data Files Used
+## 'Data Persistence'
+The system uses three JSON files to store data persistently:
 
-- `books.json`: List of books
-- `members.json`: 
-  ```json
-  {
-    "students": [...],
-    "faculty": [...]
-  }
+### 'books.json': Stores a list of dictionaries, where each dictionary represents a Book object.
+
+### 'members.json': Stores a dictionary with two keys: "students" and "faculty". Each key maps to a list of dictionaries, representing Student and Faculty objects respectively. This provides clear separation of member types in the persistent storage.
+
+### 'issued_books.json': Stores a dictionary where keys are member IDs (as strings for JSON compatibility) and values are lists of ISBNs of books issued to that member.
+
+Data is loaded automatically when the LibrarySystem is initialized and saved after every significant operation (adding/updating books/members, issuing/returning books).
+---
+## 'Example Usage'
